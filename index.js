@@ -67,6 +67,8 @@ keystone.createList('Dream', {
 
 
 
+
+
 const authStrategy = keystone.createAuthStrategy({
   type: PasswordAuthStrategy,
   list: 'User',
