@@ -14,10 +14,10 @@ module.exports = async keystone => {
   //   }`
   // );
 
-    const oneDream = [{name: "brolis 88", description: "all about 88"}]
-
-    // const name = "brolis77";
-    // const description = 'description about brolis 77';
+    const oneDream = [
+      {name: "brolis 88", description: "all about 88"},
+      {name: "sese 88", description: "all about sese 88"}
+    ]
 
   const name = oneDream[0].name
   const description = oneDream[0].description
