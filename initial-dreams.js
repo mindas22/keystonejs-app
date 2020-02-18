@@ -19,11 +19,18 @@ module.exports = async keystone => {
       {name: "sese 88", description: "all about sese 88"}
     ]
 
-  const name = oneDream[0].name
-  const description = oneDream[0].description
 
+    const name = oneDream[0].name
+    const description = oneDream[0].description
 
-    await keystone.executeQuery(
+    //this method good just for insterting new items
+    await keystone.createItems({
+      Dream: [{ name: 'Ticiana2', description: 'nu' }, { name: 'Lauren', description: 'ijuu' }],
+    });
+
+    
+  //this is graphql mutation query
+     await keystone.executeQuery(
       `mutation initialDream($name: String, $description: String) {
             createDream(data: {name: $name, description: $description}) {
               id
@@ -44,5 +51,5 @@ Dream was created:
   description: ${description}
 all good here
 `);
-  
+
 };
