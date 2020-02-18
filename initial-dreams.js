@@ -1,6 +1,5 @@
 
 module.exports = async keystone => {
-  
 
   //Count existing users
   // const {
@@ -15,11 +14,13 @@ module.exports = async keystone => {
   //   }`
   // );
 
+    const oneDream = [{name: "brolis 88", description: "all about 88"}]
 
-    const name = "brolis77";
-    const description = 'description about brolis 77';
+    // const name = "brolis77";
+    // const description = 'description about brolis 77';
 
-    
+  const name = oneDream[0].name
+  const description = oneDream[0].description
 
 
     await keystone.executeQuery(
